@@ -1,9 +1,8 @@
-var generalURL = 'https://docs.google.com/spreadsheets/d/1p8r5qRrLbDJp1tmBXvZow9ygzn2EVv3f_m0lgONC1HE/pub?output=csv';
+const generalURL = 'https://docs.google.com/spreadsheets/d/1y_FVjRDYBBpUN4Pxf5iMjlAJH4bx9qhdzPoLw9fiU0A/pub?output=csv';
 
 function processData(results) {
     for (data of results.data) {
         if (data.Display !== 'y') continue;
-
         $('table').append('\
       <tr> \
         <td>' + data['Name'] + '</td>\
